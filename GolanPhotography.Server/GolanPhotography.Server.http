@@ -1,6 +1,6 @@
 @GolanPhotography.Server_HostAddress = http://localhost:5206
 
-GET {{GolanPhotography.Server_HostAddress}}/weatherforecast/
+GET {{GolanPhotography.Server_HostAddress}}
 Accept: application/json
 
 ###
