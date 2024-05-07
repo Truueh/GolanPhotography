@@ -6,6 +6,6 @@ namespace GolanPhotography.Server.Controllers
     [Route("[controller]")]
     public class HomeController : ControllerBase
     {
-
+        
     }
 }

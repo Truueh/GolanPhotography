@@ -12,7 +12,6 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-
 // Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())
@@ -31,4 +30,3 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 System.Diagnostics.Process.Start("cmd", "/C start https://localhost:5173");
 app.Run();
-
