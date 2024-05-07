@@ -29,5 +29,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
-
+System.Diagnostics.Process.Start("cmd", "/C start https://localhost:5173");
 app.Run();
+
