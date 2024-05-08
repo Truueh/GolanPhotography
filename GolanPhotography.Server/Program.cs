@@ -1,3 +1,6 @@
+using Microsoft.Extensions.FileProviders;
+using System.Reflection.Metadata.Ecma335;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,7 +13,6 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 app.UseDefaultFiles();
-app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
