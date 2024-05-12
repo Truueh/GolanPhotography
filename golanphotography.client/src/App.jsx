@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import ImagesArr from './ImagesLoader.js';
 
 function App() {
     return (
         <div>
             <Head />
-            <LandingArea />
+            <div id="home_body">
+                <LandingArea />
+            </div>
+            <Footer />
         </div>
     )
 }
@@ -21,8 +23,16 @@ function Head() {
 
 function LandingArea() {
     return (
-        <img class={'background-image'} src = { ImagesArr[0].image } />
+        <img className="background-image" src= "../Images/HomePage/LandingImages/1.png" />
     );
+}
+
+function Footer() {
+    return (
+        <div id="footer">
+            <h6>footer bitch</h6>
+        </div>
+    )
 }
 
 export default App;

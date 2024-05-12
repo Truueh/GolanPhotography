@@ -12,15 +12,28 @@ h1 {
 }
 
 #header {
+    position: fixed;
     display: flex;
     justify-content: center;
-    height: 70px;
+    height: 7vh;
+    width: 100%;
     background-color: #25509e;
 }
 
+#home_body {
+    
+}
+
 .background-image {
-    width: 1920px;
-    max-width: 100%;
-    height: 1080px;
-    max-height: 100%;
+    height: 100vh;
+    width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#footer {
+    height: 200px;
 }
