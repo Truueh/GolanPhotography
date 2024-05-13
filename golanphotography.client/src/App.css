@@ -11,29 +11,7 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-#header {
-    position: fixed;
-    display: flex;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
-    width: 100%;
-    background-color: #25509e;
-}
-
-#home_body {
-    
-}
-
-#header-space {
-    width: 33.33%;
-    background-color: sandybrown;
-}
-
-.background-image {
-    height: 100vh;
-    width: 100%;
+img {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -41,6 +19,96 @@ h1 {
     -ms-user-select: none;
 }
 
+#header {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    background-color: #25509e;
+}
+
+#title {
+    width: 33%;
+    text-align: center;
+}
+
+#navigation-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 33.33%;
+    height: 100%;
+}
+
+.navigation-item {
+    margin-right: 1vw;
+}
+
+#header-space {
+    width: 33.33%;
+}
+
+#home_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.background-image {
+    height: 100vh;
+    width: 100%;
+}
+
+#introduction-area {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #5796b0;
+}
+
+.breaker {
+    height: 430px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#breaker_1 {
+    background-color: #162958;
+}
+
+#introduction-text {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    color: azure;
+    flex-direction: column;
+    text-align: right;
+    margin: 4vh 3vw;
+    z-index: 1;
+}
+
+#introduction-title {
+    font-size: 45px;
+    margin: 0;
+}
+
+#introduction-paragraph {
+    font-size: 30px;
+}
+
+#profile-picture {
+    height: 60vh;
+    margin-left: 3vw;
+    margin-top: 4vh;
+    z-index: 1;
+}
+
 #footer {
-    height: 200px;
+    display: flex;
+    height: 300px;
+    background-color: lightslategray;
 }
