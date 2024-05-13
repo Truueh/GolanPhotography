@@ -66,7 +66,7 @@ img {
     color: azure;
     flex-direction: column;
     text-align: right;
-    margin: 4em 3em;
+    margin: 4vh 3vw;
     z-index: 1;
 }
 
@@ -80,9 +80,9 @@ img {
 }
 
 #profile-picture {
-    height: 35em;
-    margin-left: 3em;
-    margin-top: 4em;
+    height: 60vh;
+    margin-left: 3vw;
+    margin-top: 4vh;
     z-index: 1;
 }
 
