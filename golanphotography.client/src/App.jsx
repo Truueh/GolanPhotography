@@ -16,7 +16,14 @@ function App() {
 function Head() {
     return (
         <div id="header" className="header">
-            <h1>GOLAN PHOTOGRAPHY</h1>
+            <div id="header-space"> </div>
+            <h1 id="title"> GOLAN PHOTOGRAPHY </h1>
+
+            <div id="navigation-menu" className="navigation-menu">
+                <h1 className="navigation-item"> conact us </h1>
+                <h1 className="navigation-item"> meetups </h1>
+                <h1 className="navigation-item"> about </h1>
+            </div>
         </div>
     );
 }

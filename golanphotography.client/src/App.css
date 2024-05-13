@@ -14,14 +14,35 @@ h1 {
 #header {
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 7vh;
     width: 100%;
-    background-color: #25509e;
+    background-color: sandybrown;
+}
+
+#title {
+    width:33%;
+    text-align: center;
+}
+
+#navigation-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 33.33%;
+    background-color: sandybrown;
+}
+.navigation-item{
+
+    margin-right: 1vw;
 }
 
 #home_body {
     
+}
+
+#header-space {
+    width: 33.33%;
+    background-color: sandybrown;
 }
 
 .background-image {
