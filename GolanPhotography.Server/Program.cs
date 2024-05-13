@@ -15,11 +15,13 @@ var app = builder.Build();
 app.UseDefaultFiles();
 
 // Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 
@@ -28,5 +30,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
-
+System.Diagnostics.Process.Start("cmd", "/C start https://localhost:5173");
 app.Run();

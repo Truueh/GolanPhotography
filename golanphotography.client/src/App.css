@@ -11,14 +11,6 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
 #header {
     position: fixed;
     display: flex;
@@ -31,63 +23,24 @@ img {
 }
 
 #home_body {
-    display: flex;
-    flex-direction: column;
+    
+}
+
+#header-space {
+    width: 33.33%;
+    background-color: sandybrown;
 }
 
 .background-image {
     height: 100vh;
     width: 100%;
-}
-
-#introduction-area {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #5796b0;
-}
-
-.breaker {
-    height: 430px;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-}
-
-#breaker_1 {
-    background-color: #162958;
-}
-
-#introduction-text {
-    display: flex;
-    height: fit-content;
-    width: fit-content;
-    color: azure;
-    flex-direction: column;
-    text-align: right;
-    margin: 4vh 3vw;
-    z-index: 1;
-}
-
-#introduction-title {
-    font-size: 45px;
-    margin: 0;
-}
-
-#introduction-paragraph {
-    font-size: 30px;
-}
-
-#profile-picture {
-    height: 60vh;
-    margin-left: 3vw;
-    margin-top: 4vh;
-    z-index: 1;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #footer {
-    display: flex;
-    height: 300px;
-    background-color: lightslategray;
+    height: 200px;
 }
