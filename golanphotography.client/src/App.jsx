@@ -17,13 +17,27 @@ function App() {
 function Head() {
     return (
         <div id="header" className="header">
-            <div id="header-space"> </div>
+
+            <div id="header-links">
+                <a href="https://www.facebook.com/golan.lavi"><img className="header-icon" src="../Images/header/icons/facebook_logo.png"></img> </a>
+                <a href="https://www.instagram.com/golanlavi/"><img className="header-icon" src="../Images/header/icons/instagram_logo.png"></img> </a>
+                <a href="https://wa.me/972546542615"><img className="header-icon" src="../Images/header/icons/whatsapp_logo.png"></img> </a>
+            </div>
             <h1 id="title"> GOLAN PHOTOGRAPHY </h1>
 
             <div id="navigation-menu" className="navigation-menu">
-                <h1 className="navigation-item"> conact us </h1>
-                <h1 className="navigation-item"> meetups </h1>
-                <h1 className="navigation-item"> about </h1>
+
+                <h1 className="navigation-item">
+                    <a href="http://localhost:5173/contact" target="_self">contact us</a>
+                </h1>
+
+                <h1 className="navigation-item">
+                    <a href="http://localhost:5173/meetups" target="_self">meetups</a>
+                </h1>
+
+                <h1 className="navigation-item">
+                    <a href="http://localhost:5173/about" target="_self">about</a>
+                </h1>
             </div>
         </div>
     );
