@@ -34,7 +34,7 @@ function Head() {
 
 function LandingArea() {
     return (
-        <img className="background-image" src= "../Images/HomePage/LandingImages/3.jpg" />
+        <img className="background-image" src= "../Images/HomePage/LandingImages/1.png" />
     );
 }
 
@@ -95,21 +95,25 @@ function applyClickListener() {
     var element = document.getElementsByClassName("inspectable-image");
 
     for (var i = 0; i < element.length; i++) {
-        element[i].addEventListener('click', inspectImage);
+        element[i].addEventListener('click', brickImgClick);
     }
 }
 
-function inspectImage() {
+function brickImgClick() {
+    inspectImage(event.target.src);
+}
+
+function inspectImage(img) {
     toggleDarkBackground(true);
-    insertInspectImg(event);
+    insertInspectImg(img);
     toggleBlur();
 }
 
-function insertInspectImg(event) {
-    let img = document.createElement("img");
-    img.src = event.target.src;
-    img.id = "inspected-img";
-    document.getElementById('inspect-image-mode-div').appendChild(img);
+function insertInspectImg(img) {
+    let imgDiv = document.createElement("img");
+    imgDiv.src = img;
+    imgDiv.id = "inspected-img";
+    document.getElementById('inspect-image-mode-div').appendChild(imgDiv);
 }
 
 function inspectModeClick() {
