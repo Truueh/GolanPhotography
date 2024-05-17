@@ -5,7 +5,7 @@ import './jquery.js'
 function App() {
     return (
         <div>
-            <div id="inspect-image-mode-div" onClick={inspectModeClick}></div>
+            <InspectDiv />
             <Head />
             <div id="home_body">
                 <LandingArea />
@@ -20,7 +20,6 @@ function App() {
 function Head() {
     return (
         <div id="header" className="header">
-
             <div id="header-links">
                 <a href="https://www.facebook.com/golan.lavi"><img className="header-icon" src="../Images/header/icons/facebook_logo.png"></img> </a>
                 <a href="https://www.instagram.com/golanlavi/"><img className="header-icon" src="../Images/header/icons/instagram_logo.png"></img> </a>
@@ -30,25 +29,30 @@ function Head() {
 
             <div id="navigation-menu" className="navigation-menu">
 
-                <h1 className="navigation-item">
-                    <a href="http://localhost:5173/contact" target="_self">contact us</a>
-                </h1>
-
-                <h1 className="navigation-item">
-                    <a href="http://localhost:5173/meetups" target="_self">meetups</a>
-                </h1>
-
-                <h1 className="navigation-item">
-                    <a href="http://localhost:5173/about" target="_self">about</a>
-                </h1>
+                <a href="http://localhost:5173/contact" target="_self"><h1 className="navigation-item">צרו קשר</h1></a>
+                <a href="http://localhost:5173/meetups" target="_self"><h1 className="navigation-item">מפגשים</h1></a>
+                <a href="http://localhost:5173/about" target="_self"><h1 className="navigation-item">אודות</h1></a>
             </div>
         </div>
     );
 }
 
+function InspectDiv() {
+    return (
+        <div id="inspect-image-mode-div">
+            <img id="close-inspect-icon" src="../Images/GeneralIcons/close.png" onClick={inspectModeClick}></img>
+            <div id="inspect-image-arrows-container">
+                <div class="inspect-image-arrow-div"><img src="../Images/GeneralIcons/leftArrow.png" class="move-arrow"></img></div>
+                <div id="inspect-image-container"></div>
+                <div class="inspect-image-arrow-div"><img src="../Images/GeneralIcons/rightArrow.png" class="move-arrow"></img></div>
+            </div>
+        </div>
+    )
+}
+
 function LandingArea() {
     return (
-        <img className="background-image" src= "../Images/HomePage/LandingImages/1.png" />
+        <img className="background-image" src= "../Images/HomePage/LandingImages/3.jpg" />
     );
 }
 
@@ -77,18 +81,22 @@ function BrickPattern() {
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/1.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/3.jpg"></img>
+                <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
             </div>
             <div id="brick-pattern-col-2" className="brick-pattern-col">
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/3.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/1.jpg"></img>
+                <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
             </div>
             <div id="brick-pattern-col-3" className="brick-pattern-col">
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/3.jpg"></img>
+                <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/1.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
             </div>
             <div id="brick-pattern-col-4" className="brick-pattern-col">
+                <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/3.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/2.jpg"></img>
                 <img className="brick-pattern-img inspectable-image" src="../Images/HomePage/BrickPattern/1.jpg"></img>
@@ -127,7 +135,7 @@ function insertInspectImg(img) {
     let imgDiv = document.createElement("img");
     imgDiv.src = img;
     imgDiv.id = "inspected-img";
-    document.getElementById('inspect-image-mode-div').appendChild(imgDiv);
+    document.getElementById('inspect-image-container').appendChild(imgDiv);
 }
 
 function inspectModeClick() {
